@@ -1,0 +1,41 @@
+.sidenav-body-container {
+    height: 100vh;
+    background-color: #180b28;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+}
+
+.sidenav-body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidenav-body h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidenav-body div {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sidenav-body div:hover {
+    background-color: #34495e;
+}
+
+.sidenav-body div img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}

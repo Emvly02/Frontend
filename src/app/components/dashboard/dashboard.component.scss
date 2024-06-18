@@ -1,0 +1,14 @@
+.main-container {
+    display: flex;
+    height: 100%;
+}
+.container {
+    flex: 1;
+    border-radius: 1rem;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 3rem;
+    height: fit-content;
+    cursor: pointer;
+}

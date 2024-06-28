@@ -1,3 +1,4 @@
+<html>
 <div class="main-container">
     <div class="login-container">
         <h1>Login</h1>
@@ -6,17 +7,18 @@
         }
         <form [formGroup]="loginForm" (submit)="onSubmit()">
             <div class="form-group">
-                <label for="username">Username</label>
-                <input id="username" placeholder="Username..." formControlName="username" required />
-
-                <label for="password">Password</label>
+                <!--<label for="username">Username</label>-->
+                <input id="username" type="text" placeholder="Username..." formControlName="username" required />
+                <br>
+                <!--<label for="password">Password</label>-->
                 <input id="password" type="password" placeholder="Password..." formControlName="password" required />
             </div>
             <button type="submit">Login</button>
         </form>
         <p>
-            Don't have an account?
+            Don't have an account? <br>
             <a routerLink="/register" routerLinkActive="active">Register here</a>
         </p>
     </div>
 </div>
+</html>

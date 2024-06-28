@@ -1,1 +1,23 @@
-<p>register works!</p>
+<html>
+<div class="main-container">
+    <div class="login-container">
+      <h1>Register</h1>
+      @if(showErrorMessage) {
+      <p>{{ showErrorMessage }}</p>
+      }
+      <form [formGroup]="registerForm" (submit)="onSubmit()">
+        <div class="form-group">
+          <input id="firstname" type="text" placeholder="Firstname..." formControlName="firstname" minlength="1" required />
+          <br>
+          <input id="lastname" type="text" placeholder="Lastname..." formControlName="lastname" minlength="1" required />
+          <br>
+          <input id="username" type="text" placeholder="Username..." formControlName="username" minlength="1" required />
+          <br>
+          <input id="password" type="password" placeholder="Password..." formControlName="password" minlength="1" required />
+      </div>
+        <button type="submit">Register</button>
+      </form>
+      <p>Already have an account? <a routerLink="/login">Login here</a></p>
+    </div>
+  </div>
+  </html>

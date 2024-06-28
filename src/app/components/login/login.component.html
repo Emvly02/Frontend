@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="main-container">
+    <div class="login-container">
+        <h1>Login</h1>
+        @if(showErrorMessage) {
+        <p>{{ showErrorMessage }}</p>
+        }
+        <form [formGroup]="loginForm" (submit)="onSubmit()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input id="username" placeholder="Username..." formControlName="username" required />
+
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Password..." formControlName="password" required />
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p>
+            Don't have an account?
+            <a routerLink="/register" routerLinkActive="active">Register here</a>
+        </p>
+    </div>
+</div>

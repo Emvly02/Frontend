@@ -1,2 +1,31 @@
-<!--<app-sidenav></app-sidenav>-->
-<router-outlet/>
+@if (showSidenar) {
+    <div class="main-content">
+        <app-sidenav></app-sidenav>
+        <header class="header">
+          <div class="logout">
+            <button (click)="logout()">Logout</button>
+          </div>
+        </header>
+        <router-outlet></router-outlet>
+      </div>
+    } @else {
+        <div class="main-content" [class.full-width]="!showSidenar">
+            <router-outlet></router-outlet>
+        </div>
+    }
+    
+
+<!-- 
+    <div class="main-content">
+        <app-sidenav></app-sidenav>
+        <header class="header"> 
+            <div class="logout">
+                <button (click)="logout()">Logout</button>
+            </div>
+        </header>
+        
+    </div>
+    @else
+    <div class="main-content" [class.full-width]="!showSidenar">
+        <router-outlet></router-outlet>
+    </div> -->

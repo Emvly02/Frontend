@@ -1,0 +1,39 @@
+/*Für die Sidenav: wenn man auf Dashboard, ToDo oder Termine ist*/
+.main-content {
+    transition: margin-left 0.3s ease;
+    margin-left: 19.5%; //Wegen Sidenav 
+}
+//Für Login und Register
+.main-content.full-width {
+    margin-left: 0;
+    width: 100%;
+}
+
+/*Logout Button :-)*/
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px 10px;
+}
+
+.logout button {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.logout button:hover {
+    background-color: rgb(99, 99, 99);
+}
+
+.logout button:active {
+    background-color: rgb(70, 70, 70);
+}
+/*Logout Button Ende :-o*/

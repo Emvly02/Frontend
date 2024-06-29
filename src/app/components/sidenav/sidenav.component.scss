@@ -7,7 +7,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
+    width: 19.5%;
 }
 
 .sidenav-body {
@@ -21,17 +21,24 @@
     margin-bottom: 20px;
 }
 
-.sidenav-body div {
-    display: flex;
-    align-items: center;
-    padding: 10px 15px;
+.sidenav-body a {
+    text-decoration: none; 
+    color: inherit; 
+    display: flex; 
+    align-items: center; 
+    padding: 10px 15px; 
     margin-bottom: 10px;
-    border-radius: 4px;
-    cursor: pointer;
+    border-radius: 4px; 
+    cursor: pointer; 
 }
 
-.sidenav-body div:hover {
+.sidenav-body a:hover {
     background-color: #34495e;
+}
+
+/* Stil für aktiven Link */
+.sidenav-body a.active {
+    font-weight: bold;
 }
 
 .sidenav-body div img {

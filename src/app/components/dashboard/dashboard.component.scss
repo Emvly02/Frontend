@@ -2,13 +2,101 @@
     display: flex;
     height: 100%;
 }
-.container {
+
+p {
+    margin: 2px;
+}
+
+.Platzhalter {
+    padding: 12px 6px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.todo-container, .appointment-container {
     flex: 1;
-    border-radius: 1rem;
+    border-radius: 2rem;
     background-color: white;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 3rem;
+    margin: 2rem;
     height: fit-content;
     cursor: pointer;
 }
+
+.todos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    
+}
+
+.todos-table th,
+.todos-table td {
+    width: calc(100% / 3);
+    padding: 12px 6px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.todos-table th {
+    background-color: rgb(235, 235, 245);
+    font-weight: bold;
+    color: #4b4b7c;
+}
+
+.todos-table th:first-child {
+    border-top-left-radius: 1rem;
+}
+
+.todos-table th:last-child {
+    border-top-right-radius: 1rem;
+}
+
+.todos-table tbody tr:nth-child(even) {
+    background-color: #f8f8fc;
+}
+
+.todos-table .status {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.todos-table .status.closed {
+    background-color: #f1e3e3;
+    color: #d9534f;
+}
+
+.todos-table .status.open {
+    background-color: #e3f1e3;
+    color: #5cb85c;
+}
+
+h1 {
+    font-size: 24px;
+    color: #4b4b7c;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 16px;
+    color: #4b4b7c;
+    margin-top: 0;
+}
+
+.todos-table tfoot {
+    background-color: rgb(235, 235, 245);
+}
+.todos-table tfoot td:first-child {
+    border-bottom-left-radius: 1rem;
+}
+
+.todos-table tfoot td:last-child {
+    border-bottom-right-radius: 1rem;
+}
+
+.todos-table tfoot td {
+    border-bottom: 0;
+}
+

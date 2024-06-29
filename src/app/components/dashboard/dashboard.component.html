@@ -1,35 +1,126 @@
 <div class="main-container">
-
-    <div class="container">
-        <h1>Anstehende ToDos</h1>
-        
-        <table>
+    <div class="todo-container" (click)="navigate('/to-do')">
+        <div class="head">
+            <h1>Anstehende ToDo's</h1>
+            <h3>(Diesen Monat)</h3>
+        </div>
+        <table class="todos-table">
             <thead>
-
+                <tr class="table-head-row">
+                    @for (column of columnsTodo; track $index) {
+                    <th class="table-header-cell">
+                        {{ column.label }}
+                    </th>
+                    }
+                </tr>
             </thead>
+            @if (displayedTodoData.length === 0) {
+            <tr class="table-body-row">
+                <td class="table-data-cell">
+                    <p>DB</p>
+                </td>
+                <td class="table-data-cell">
+                    <p>01.07.2024</p>
+                </td>
+                <td class="table-data-cell status">
+                    <span class="status open">
+                        OFFEN
+                    </span>
+                </td>
+            </tr>
+            <tr class="table-body-row">
+                <td class="table-data-cell">
+                </td>
+                <td class="table-data-cell">
+                </td>
+                <td class="table-data-cell status">
+                </td>
+            </tr>
+            <tr class="table-body-row">
+                <td class="table-data-cell">
+                </td>
+                <td class="table-data-cell">
+                </td>
+                <td class="table-data-cell status">
+                </td>
+            </tr>
+            } @else {
             <tbody>
-
+                @for (row of displayedTodoData; track $index) {
+                <tr class="table-body-row">
+                    <td class="table-data-cell">
+                        {{ row.title }}
+                    </td>
+                    <td class="table-data-cell">
+                        {{ row.date | date : "d.M.yyyy" }}
+                    </td>
+                    <td class="table-data-cell status">
+                        <span class="status" [ngClass]="{
+                  open: row.status == false,
+                  closed: row.status == true
+                }">
+                            {{ row.status ? "GESCHLOSSEN" : "OFFEN" }}
+                        </span>
+                    </td>
+                </tr>
+                }
             </tbody>
+            }
+            
             <tfoot>
-
+                <tr>
+                    <td colspan="3"></td>
+                </tr>
             </tfoot>
         </table>
     </div>
 
-    <div class="container">
-        <h1>Anstehende Termine</h1>
-
-        <table>
+    <!-------------------------------APPOINTMENT CONTAINER----------------------------------->
+    <div class="appointment-container" (click)="navigate('/appointment')">
+        <div class="head">
+            <h1>Anstehende Termine</h1>
+            <h3>(Diesen Monat)</h3>
+        </div>
+        <table class="todos-table">
             <thead>
-
+                <tr class="table-head-row">
+                    @for (column of columnsAppointment; track $index) {
+                    <th class="table-header-cell">
+                        {{ column.label }}
+                    </th>
+                    }
+                </tr>
             </thead>
+            @if (displayCalendarData.length === 0) {
+            <div class="Platzhalter">Super, alles Erledigt!</div>
+            } @else {
             <tbody>
-
+                @for (row of displayCalendarData; track $index) {
+                <tr class="table-body-row">
+                    <td class="table-data-cell">
+                        {{ row.title }}
+                    </td>
+                    <td class="table-data-cell">
+                        {{ row.date | date : "d.M.yyyy" }}
+                    </td>
+                    <td class="table-data-cell status">
+                        <span class="status" [ngClass]="{
+                  open: row.status == false,
+                  closed: row.status == true
+                }">
+                            {{ row.status ? "GESCHLOSSEN" : "OFFEN" }}
+                        </span>
+                    </td>
+                </tr>
+                }
             </tbody>
+            }
+            
             <tfoot>
-                
+                <tr>
+                    <td colspan="3"></td>
+                </tr>
             </tfoot>
         </table>
     </div>
-
 </div>

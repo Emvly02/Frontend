@@ -1,112 +1,120 @@
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal {
-    background: white;
-    border-radius: 2rem;
-    padding: 20px;
-    width: 400px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .modal-content h2 {
-    font-weight: bold;
-    color: #4b4b7c;
-  }
-  
-  .form-fields mat-form-field {
-    width: 100%;
-    margin-bottom: 16px;
-  }
-  
-  .mat-form-field-outline {
-    border-color: #d0d0d0;
-    border-width: 2px;
-    border-radius: 10px;
-  }
-  
-  .mat-form-field-outline-thicker {
-    border-color: #d0d0d0;
-    border-width: 2px;
-    border-radius: 10px;
-  }
-  
-  .mat-form-field-appearance-outline .mat-form-field-outline-thicker {
-    border-color: #d0d0d0;
-    border-width: 2px;
-    border-radius: 10px;
-  }
-  
-  .mat-form-field-appearance-outline .mat-form-field-outline {
-    border-color: #d0d0d0;
-    border-width: 2px;
-    border-radius: 10px;
-  }
-  
-  .mat-form-field-appearance-outline .mat-form-field-outline-end, .mat-form-field-appearance-outline .mat-form-field-outline-start {
-    border-color: #d0d0d0;
-    border-width: 2px;
-    border-radius: 10px;
-  }
-  
-  .mat-input-element {
-    border-color: #d0d0d0;
-    border-width: 2px;
-    border-radius: 10px;
-  }
-  
-  .mat-form-field-outline-start, .mat-form-field-outline-end {
-    border-color: #d0d0d0;
-    border-width: 2px;
-    border-radius: 10px;
-  }
-  
-  .mat-form-field-label {
-    color: #6160d4;
-  }
-  
-  .mat-form-field-outline-gap {
-    border-color: #d0d0d0;
-    border-width: 2px;
-    border-radius: 10px;
-  }
-  
-  .actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .add-appointment,
-  .cancel {
-    padding: 10px;
-    border: none;
-    border-radius: 0.5rem;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .add-appointment {
-    background-color: #6160d4;
-  }
-  
-  .cancel {
-    background-color: #c20000;
-  }
-  
-  .loading-spinner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  border-radius: 2rem;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  font-weight: bold;
+  color: #4b4b7c;
+}
+
+.form-fields mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.mat-form-field-outline {
+  border-color: #d0d0d0;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.mat-form-field-outline-thicker {
+  border-color: #d0d0d0;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thicker {
+  border-color: #d0d0d0;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  border-color: #d0d0d0;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-end,
+.mat-form-field-appearance-outline .mat-form-field-outline-start {
+  border-color: #d0d0d0;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.mat-input-element {
+  border-color: #d0d0d0;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.mat-form-field-outline-start,
+.mat-form-field-outline-end {
+  border-color: #d0d0d0;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.mat-form-field-label {
+  color: #6160d4;
+}
+
+.mat-form-field-outline-gap {
+  border-color: #d0d0d0;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-appointment,
+.cancel {
+  padding: 10px;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.add-appointment {
+  background-color: #6160d4;
+}
+
+.cancel {
+  background-color: #c20000;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

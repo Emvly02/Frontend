@@ -1,5 +1,12 @@
 .modal-overlay {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay-div {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

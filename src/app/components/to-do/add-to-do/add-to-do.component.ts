@@ -45,9 +45,9 @@ export class AddToDoComponent {
     public dialogRef: MatDialogRef<AddToDoComponent>
   ) {
     this.todoForm = this.formBuilder.group({
-      name: new FormControl('', Validators.required),
+      title: new FormControl('', Validators.required),
       status: new FormControl(false, Validators.required),
-      dueDate: new FormControl(new Date(), Validators.required),
+      date: new FormControl(new Date(), Validators.required),
       description: new FormControl(''),
       users: new FormControl([])
     });

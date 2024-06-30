@@ -39,14 +39,14 @@ export class DashboardComponent {
   }
 
   protected columnsTodo = [
-    { key: 'name', label: 'Aufgabe' },
-    { key: 'dueDate', label: 'Deadline' },
+    { key: 'title', label: 'Aufgabe' },
+    { key: 'date', label: 'Deadline' },
     { key: 'status', label: 'Status' },
   ];
 
   protected columnsAppointment = [
     { key: 'title', label: 'Termin' },
-    { key: 'dueDate', label: 'Datum' },
+    { key: 'date', label: 'Datum' },
     { key: 'status', label: 'Status' },
   ];
 

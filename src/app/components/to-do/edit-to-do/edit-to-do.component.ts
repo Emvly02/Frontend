@@ -43,9 +43,9 @@ export class EditToDoComponent {
     // ToDo-Form mit attributen befüllen.
     this.todoForm = this.formBuilder.group({
       id: todo.id,
-      name: new FormControl(todo.title, Validators.required),
+      title: new FormControl(todo.title, Validators.required),
       status: new FormControl(todo.status, Validators.required),
-      dueDate: new FormControl(todo.date, Validators.required),
+      date: new FormControl(todo.date, Validators.required),
       description: new FormControl(todo.description),
       users: new FormControl(todo.users, Validators.required)
     });   

@@ -43,9 +43,9 @@ export class EditAppointmentComponent {
     // Appointment-Form mit attributen befüllen.
     this.appointmentForm = this.formBuilder.group({
       id: appointment.id,
-      name: new FormControl(appointment.title, Validators.required),
+      title: new FormControl(appointment.title, Validators.required),
       status: new FormControl(appointment.status, Validators.required),
-      dueDate: new FormControl(appointment.date, Validators.required),
+      ddate: new FormControl(appointment.date, Validators.required),
       description: new FormControl(appointment.description),
       users: new FormControl(appointment.users, Validators.required)
     });   

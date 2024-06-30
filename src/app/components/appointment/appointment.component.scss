@@ -1,0 +1,162 @@
+.main {
+    display: flex;
+    height: 100%;
+}
+
+.appointment {
+    flex: 1;
+    border-radius: 2rem;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.appointment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.appointment-table th,
+.appointment-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+thead th:last-child,
+tbody td:last-child {
+    text-align: right;
+}
+
+thead th:first-child,
+tbody td:first-child {
+    text-align: left;
+}
+
+.appointment-table tfoot td {
+    border-bottom: 0;
+}
+
+.appointment-table th {
+    background-color: rgb(235, 235, 245);
+    font-weight: bold;
+    color: #4b4b7c;
+}
+
+.appointment-table th:first-child {
+    border-top-left-radius: 1rem;
+}
+
+.appointment-table th:last-child {
+    border-top-right-radius: 1rem;
+}
+
+.appointment-table tbody tr:nth-child(even) {
+    background-color: #f8f8fc;
+}
+
+.appointment-table .status {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.appointment-table .status.closed {
+    background-color: #f1e3e3;
+    color: #d9534f;
+}
+
+.appointment-table .status.open {
+    background-color: #e3f1e3;
+    color: #5cb85c;
+}
+
+.appointment-table .action {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #7c7ab7;
+    padding: 5px;
+}
+
+.appointment-table .action.edit {
+    color: #5bc0de;
+}
+
+.appointment-table .action.delete {
+    color: #d9534f;
+}
+
+.appointment-table .action.more {
+    color: #5bc0de;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4b4b7c;
+}
+
+.appointment-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.appointment-controls input[type="search"],
+.appointment-controls select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.appointment-controls input[type="search"] {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head button {
+    padding: 10px;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #6160d4;
+    color: white;
+    cursor: pointer;
+}
+
+.appointment-table tfoot {
+    background-color: rgb(235, 235, 245);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-info {
+    font-size: 14px;
+    color: #4b4b7c;
+    font-weight: bold;
+}
+
+.appointment-table tfoot td:first-child {
+    border-bottom-left-radius: 1rem;
+}
+
+.appointment-table tfoot td:last-child {
+    border-bottom-right-radius: 1rem;
+}

@@ -25,7 +25,7 @@ export class LoginComponent {
   }
 
   //On-Click Funktion um sich einzuloggen
-  //Value der LoginForm entspricht dem Member-Objekt
+  //Value der LoginForm entspricht dem User-Objekt
   //Response und error wird hier gehandelt
   //subscribe ist durchgestrichen, weil diese Art von Errorhandling veraltet ist
   onSubmit() {

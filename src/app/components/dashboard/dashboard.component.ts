@@ -51,7 +51,7 @@ export class DashboardComponent {
   ];
 
   protected displayedTodoData: IToDo[] = [];
-  protected displayCalendarData: IAppointment[] = [];
+  protected displayAppointmentData: IAppointment[] = [];
 
   protected getAllTodos() {
     if (this.user && this.user.id)
@@ -69,9 +69,9 @@ export class DashboardComponent {
   protected getAllAppointments() {
     if (this.user && this.user.id)
       this.appointmentService.getAllAppointmentsByUserId(this.user.id).subscribe(res => {
-        this.displayCalendarData = res.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        this.displayAppointmentData = res.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
       });
-    this.displayCalendarData = [
+    this.displayAppointmentData = [
       {
         id: 1,
         title: "Projektname...",

@@ -66,7 +66,7 @@
                 }
             </tbody>
             }
-            
+
             <tfoot>
                 <tr>
                     <td colspan="3"></td>
@@ -91,11 +91,36 @@
                     }
                 </tr>
             </thead>
-            @if (displayCalendarData.length === 0) {
-            <div class="Platzhalter">Super, alles Erledigt!</div>
+            @if (displayedTodoData.length === 0) {
+            <tr class="table-body-row">
+                <td class="table-data-cell">
+                    <p></p>
+                </td>
+                <td class="table-data-cell">
+                    <p></p>
+                </td>
+                <td class="table-data-cell status">
+                </td>
+            </tr>
+            <tr class="table-body-row">
+                <td class="table-data-cell">
+                </td>
+                <td class="table-data-cell">
+                </td>
+                <td class="table-data-cell status">
+                </td>
+            </tr>
+            <tr class="table-body-row">
+                <td class="table-data-cell">
+                </td>
+                <td class="table-data-cell">
+                </td>
+                <td class="table-data-cell status">
+                </td>
+            </tr>
             } @else {
             <tbody>
-                @for (row of displayCalendarData; track $index) {
+                @for (row of displayAppointmentData; track $index) {
                 <tr class="table-body-row">
                     <td class="table-data-cell">
                         {{ row.title }}
@@ -115,7 +140,7 @@
                 }
             </tbody>
             }
-            
+
             <tfoot>
                 <tr>
                     <td colspan="3"></td>
